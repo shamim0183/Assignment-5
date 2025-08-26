@@ -36,7 +36,7 @@
 <body class="bg-[#F5FFF6]">
   <!-- Header Section Start -->
   <header class="   bg-white">
-    <nav class="py-6 max-w-[1800px] mx-auto flex justify-between items-center font-inter">
+    <nav class="py-6 max-w-[1800px] mx-auto sm:flex justify-between items-center font-inter ">
       <div class="flex justify-center items-center">
         <img class="" src="./assets/LogoBD.png" alt="logo">
       </div>
@@ -55,7 +55,7 @@
       </div>
     </nav>
     <!-- Banner Section Start -->
-     <div class="bg-linear-to-r from-[#013223] from-0% via-[#006747] via-50% to-[#013223] to-100% py-5">
+     <div class="bg-linear-to-r from-[#013223] from-0% via-[#006747] via-50% to-[#013223] to-100% py-5 px-6">
       <div class="text-white font-hind">
         <div class="text-center">
           <img class="w-[90px] mx-auto" src="./assets/logo-dark.png" alt="logo-dark" >
@@ -69,8 +69,8 @@
   <!-- Header Section End -->
   <!-- Main Section Start -->
    <main>
-    <section class="max-w-[1800px] mx-auto grid grid-cols-12 gap-[30px] mt-[48px] mb-[86px]">
-      <div class="col-span-9 gap-[30px] grid grid-cols-3">
+    <section class="max-w-[1800px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-[30px] mt-[48px] mb-[86px] px-8">
+      <div class="lg:col-span-9 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[30px]">
         <div class="rounded-[12px] bg-white p-8 drop-shadow-[0_2px_3px_rgba(0,0,0,0.15)]">
           <div class="flex justify-between items-center mb-4">
             <div class="w-[60px] h-[60px] bg-[#FFE3E2] rounded-2xl flex items-center justify-center"> 
@@ -234,15 +234,15 @@
           </div>
         </div>
       </div>
-      <div class="col-span-3 rounded-[12px] bg-white p-6 drop-shadow-[0_2px_3px_rgba(0,0,0,0.15)]">
+      <div class="lg:col-span-3 mt-8 lg:mt-0 rounded-[12px] bg-white p-6 drop-shadow-[0_2px_3px_rgba(0,0,0,0.15)]">
         <div class="flex justify-between items-center mb-4">
           <div class="flex gap-2 font-roboto text-xl font-medium items-center">
             <img src="./assets/clock.png" alt="clock" class="w-[24px] h-[24px]" >
             <p>Call History</p>
           </div>
-          <div class="bg-[#00A63E] py-3.5 px-9 rounded-[50px] text-white font-inter font-semibold">
-            <p>Clear</p>
-          </div>
+          <button class="bg-[#00A63E] py-3.5 px-9 rounded-[50px] text-white font-inter font-semibold cursor-pointer hover:bg-[#008C3E] transition duration-250 ease-out">
+            Clear
+          </button>
         </div>
         <div class="p-4 bg-[#FAFAFA] rounded-[8px] flex justify-between items-center mb-2">
           <div class="">
