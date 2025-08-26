@@ -7,7 +7,7 @@
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <!-- Google Fonts with Tailwind -->
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
   
     @import "tailwindcss";
   
@@ -20,13 +20,41 @@
       .font-roboto {
         font-family: "Roboto", sans-serif;
       }
+
+      .font-inter {
+        font-family: "Inter", sans-serif;
+      }
     }
   
     /* Gobal rules */
   </style>
+  <!-- Daisy UI CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <title>Emergency-Hotline</title>
 </head>
-<body>
-  
+<body class="bg-[#F5FFF6]">
+  <!-- Header Section Start -->
+  <header class="   bg-white">
+    <nav class="py-6 max-w-[1800px] mx-auto flex justify-between items-center font-inter">
+      <div class="flex justify-center items-center">
+        <img class="" src="./assets/LogoBD.png" alt="logo">
+      </div>
+      <div class="flex justify-center items-center gap-[20px]">
+        <div class="flex items-center font-[900] py-3 px-8 bg-[#41ff6b1a] rounded-[50px]">
+          <span class="">0</span>
+          <img class="w-[30px] ml-[10px]" src="./assets/heart.png" alt="Heart">
+        </div>
+        <div class="flex items-center font-[900] py-3 px-8 bg-[#41ff6b1a] rounded-[50px]">
+          <span class="">100</span>
+          <img class="w-[30px] ml-[10px]" src="./assets/coin.png" alt="Coin">
+        </div>
+        <div class="flex items-center font-[500] py-3 px-8 bg-[#00A63E] rounded-[50px] text-white">
+          <p><span class="">0</span> Copy</p>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- Header Section End -->
 </body>
 </html>
