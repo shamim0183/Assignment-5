@@ -25,10 +25,10 @@ Array.from(callBtn).forEach(function (element) {
   const serviceName = element.parentNode.parentNode.querySelector("p").textContent;
   const phoneNumber = element.parentNode.parentNode.querySelector("h3").textContent;
   element.addEventListener("click", function () {
-    alert(`Calling ${serviceTitle} ${phoneNumber}`);
+    alert(`কল হচ্ছে ${serviceTitle} ${phoneNumber}`);
     coinCount.textContent -= 20;
     if (coinCount.textContent < 0) {
-      alert("You don't have enough coins");
+      alert("আপনার পর্যাপ্ত কয়েন নেই");
       coinCount.textContent = 0;
       return;
     }
@@ -50,7 +50,7 @@ Array.from(callBtn).forEach(function (element) {
 Array.from(copyBtn).forEach(function (element) {
   element.addEventListener("click", function () {
     const phoneNumber = element.parentNode.parentNode.querySelector("h3").textContent;
-    alert(`${phoneNumber} number copied to clipboard`);
+    alert(`${phoneNumber} নাম্বারটি কপি করা হয়েছে`);
     navigator.clipboard.writeText(phoneNumber);
     copyCount.textContent++;
   });
@@ -58,5 +58,5 @@ Array.from(copyBtn).forEach(function (element) {
 
 clearBtn.addEventListener("click", function () {
   dynamicDiv.innerHTML = "";
-  alert("All calls history cleared");
+  alert("কল রেকর্ড মুছে ফেলা হয়েছে");
 });
