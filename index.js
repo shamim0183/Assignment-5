@@ -32,17 +32,15 @@ Array.from(callBtn).forEach(function (element) {
       coinCount.textContent = 0;
       return;
     }
-    
-    console.log(phoneNumber);
     const currentTime = new Date().toLocaleTimeString();
     const newDiv = document.createElement("div");
     newDiv.innerHTML = `
     <div class="p-4 bg-[#FAFAFA] rounded-[8px] flex justify-between items-center mb-2">
-      <div class="">
+      <div class="my-auto">
           <h2 class="font-hind font-semibold text-[18px]">${serviceTitle}</h2>
-          <p class="font-roboto text-[18px] text-[#5C5C5C] mb-6">${phoneNumber}</p>
+          <p class="font-roboto text-[18px] text-[#5C5C5C] ">${phoneNumber}</p>
       </div>
-      <p class="font-roboto text-[16px] text-black mb-6">${currentTime}</p>
+      <p class="font-roboto text-[16px] text-black">${currentTime}</p>
     </div>
     `;
     dynamicDiv.appendChild(newDiv);
@@ -53,11 +51,12 @@ Array.from(copyBtn).forEach(function (element) {
   element.addEventListener("click", function () {
     const phoneNumber = element.parentNode.parentNode.querySelector("h3").textContent;
     alert(`${phoneNumber} number copied to clipboard`);
-    copyCount.textContent++;
     navigator.clipboard.writeText(phoneNumber);
+    copyCount.textContent++;
   });
 });
 
 clearBtn.addEventListener("click", function () {
   dynamicDiv.innerHTML = "";
+  alert("All calls history cleared");
 });
