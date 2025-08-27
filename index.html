@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,11 +9,11 @@
   <!-- Google Fonts with Tailwind -->
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-  
+
     @import "tailwindcss";
-  
+
     @layer utilities {
-  
+
       .font-hind {
         font-family: "hind madurai", sans-serif;
       }
@@ -25,14 +26,16 @@
         font-family: "Inter", sans-serif;
       }
     }
-  
+
     /* Gobal rules */
+
   </style>
   <!-- Daisy UI CDN -->
   <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <title>Emergency-Hotline</title>
 </head>
+
 <body class="bg-[#F5FFF6]">
   <!-- Header Section Start -->
   <header class="   bg-white">
@@ -42,194 +45,249 @@
       </div>
       <div class="flex justify-center items-center gap-[20px]">
         <div class="flex items-center font-[900] py-3 px-8 bg-[#41ff6b1a] rounded-[50px]">
-          <span class="">0</span>
+          <span id="heart-count">0</span>
           <img class="w-[30px] ml-[10px]" src="./assets/heart.png" alt="Heart">
         </div>
         <div class="flex items-center font-[900] py-3 px-8 bg-[#41ff6b1a] rounded-[50px]">
-          <span class="">100</span>
+          <span id="coin-count">100</span>
           <img class="w-[30px] ml-[10px]" src="./assets/coin.png" alt="Coin">
         </div>
         <div class="flex items-center font-[500] py-3 px-8 bg-[#00A63E] rounded-[50px] text-white">
-          <p><span class="">0</span> Copy</p>
+          <p><span id="copy-count">0</span> Copy</p>
         </div>
       </div>
     </nav>
     <!-- Banner Section Start -->
-     <div class="bg-linear-to-r from-[#013223] from-0% via-[#006747] via-50% to-[#013223] to-100% py-5 px-6">
+    <div class="bg-linear-to-r from-[#013223] from-0% via-[#006747] via-50% to-[#013223] to-100% py-5 px-6">
       <div class="text-white font-hind">
         <div class="text-center">
-          <img class="w-[90px] mx-auto" src="./assets/logo-dark.png" alt="logo-dark" >
+          <img class="w-[90px] mx-auto" src="./assets/logo-dark.png" alt="logo-dark">
           <h1 class="font-extrabold text-[40px] my-3">জরুরি সেবা ডিরেক্টরি</h1>
-          <p class="font-semibold text-[20px]">Government Emergency Services at Your Fingertip – A Project by Government of the People’s Republic of Bangladesh</p>
+          <p class="font-semibold text-[20px]">Government Emergency Services at Your Fingertip – A Project by Government
+            of the People’s Republic of Bangladesh</p>
         </div>
       </div>
-     </div>
+    </div>
     <!-- Banner Section End -->
   </header>
   <!-- Header Section End -->
   <!-- Main Section Start -->
-   <main>
+  <main>
     <section class="max-w-[1800px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-[30px] mt-[48px] mb-[86px] px-8">
       <div class="lg:col-span-9 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[30px]">
         <div class="rounded-[12px] bg-white p-8 drop-shadow-[0_2px_3px_rgba(0,0,0,0.15)]">
           <div class="flex justify-between items-center mb-4">
-            <div class="w-[60px] h-[60px] bg-[#FFE3E2] rounded-2xl flex items-center justify-center"> 
-              <img class="w-[32px]" src="./assets/emergency.png" alt="Emergency" >
+            <div class="w-[60px] h-[60px] bg-[#FFE3E2] rounded-2xl flex items-center justify-center">
+              <img class="w-[32px]" src="./assets/emergency.png" alt="Emergency">
             </div>
-            <img class="cursor-pointer" src="./assets/HeartVector.png" alt="Heart" >
+            <img class="cursor-pointer vectorHeart" src="./assets/HeartVector.png" alt="Heart">
           </div>
           <div class="">
             <h2 class="font-hind font-bold text-2xl">জাতীয় জরুরি সেবা</h2>
             <p class="font-roboto text-[18px] text-[#5C5C5C] mb-6">National Emergency</p>
             <h3 class="font-roboto text-[32px] font-bold mb-1">999</h3>
-            <p class="font-hind rounded-full bg-[#F2F2F2] px-4 py-2 text-[#5C5C5C] mb-[30px] inline-block text-[18px] font-normal">সার্বজনীন</p>
+            <p
+              class="font-hind rounded-full bg-[#F2F2F2] px-4 py-2 text-[#5C5C5C] mb-[30px] inline-block text-[18px] font-normal">
+              সার্বজনীন</p>
             <div class="flex gap-2 font-roboto">
-              <button class="cursor-pointer w-full justify-center flex items-center border border-[#D4D6D5] rounded-lg p-[10px] hover:bg-black hover:text-white transition duration-250 ease-out "><img class="mr-[6px]" src="./assets/copy.png" alt="Copy" > Copy</button>
-              <button class="cursor-pointer w-full justify-center text-white flex items-center bg-[#00A63E] hover:bg-[#008C3E] rounded-lg p-[10px] transition duration-250 ease-out "><img class="mr-[6px]" src="./assets/call.png" alt="Call" > Call</button>
+              <button
+                class="copy-btn cursor-pointer w-full justify-center flex items-center border border-[#D4D6D5] rounded-lg p-[10px] hover:bg-black hover:text-white transition duration-250 ease-out "><img
+                  class="mr-[6px]" src="./assets/copy.png" alt="Copy"> Copy</button>
+              <button
+                class="call-btn cursor-pointer w-full justify-center text-white flex items-center bg-[#00A63E] hover:bg-[#008C3E] rounded-lg p-[10px] transition duration-250 ease-out "><img
+                  class="mr-[6px]" src="./assets/call.png" alt="Call"> Call</button>
             </div>
           </div>
         </div>
         <div class="rounded-[12px] bg-white p-8 drop-shadow-[0_2px_3px_rgba(0,0,0,0.15)]">
           <div class="flex justify-between items-center mb-4">
-            <div class="w-[60px] h-[60px] bg-[#FFE3E2] rounded-2xl flex items-center justify-center"> 
-              <img class="w-[32px]" src="./assets/emergency.png" alt="Emergency" >
+            <div class="w-[60px] h-[60px] bg-[#FFE3E2] rounded-2xl flex items-center justify-center">
+              <img class="w-[32px]" src="./assets/police.png" alt="Police">
             </div>
-            <img class="cursor-pointer" src="./assets/HeartVector.png" alt="Heart" >
+            <img class="cursor-pointer vectorHeart" src="./assets/HeartVector.png" alt="Heart">
           </div>
           <div class="">
-            <h2 class="font-hind font-bold text-2xl">জাতীয় জরুরি সেবা</h2>
-            <p class="font-roboto text-[18px] text-[#5C5C5C] mb-6">National Emergency</p>
+            <h2 class="font-hind font-bold text-2xl">পুলিশ</h2>
+            <p class="font-roboto text-[18px] text-[#5C5C5C] mb-6">Police</p>
             <h3 class="font-roboto text-[32px] font-bold mb-1">999</h3>
-            <p class="font-hind rounded-full bg-[#F2F2F2] px-4 py-2 text-[#5C5C5C] mb-[30px] inline-block text-[18px] font-normal">সার্বজনীন</p>
+            <p
+              class="font-hind rounded-full bg-[#F2F2F2] px-4 py-2 text-[#5C5C5C] mb-[30px] inline-block text-[18px] font-normal">
+              পুলিশ</p>
             <div class="flex gap-2 font-roboto">
-              <button class="cursor-pointer w-full justify-center flex items-center border border-[#D4D6D5] rounded-lg p-[10px] hover:bg-black hover:text-white transition duration-250 ease-out "><img class="mr-[6px]" src="./assets/copy.png" alt="Copy" > Copy</button>
-              <button class="cursor-pointer w-full justify-center text-white flex items-center bg-[#00A63E] hover:bg-[#008C3E] rounded-lg p-[10px] transition duration-250 ease-out "><img class="mr-[6px]" src="./assets/call.png" alt="Call" > Call</button>
+              <button
+                class="copy-btn cursor-pointer w-full justify-center flex items-center border border-[#D4D6D5] rounded-lg p-[10px] hover:bg-black hover:text-white transition duration-250 ease-out "><img
+                  class="mr-[6px]" src="./assets/copy.png" alt="Copy"> Copy</button>
+              <button
+                class="call-btn cursor-pointer w-full justify-center text-white flex items-center bg-[#00A63E] hover:bg-[#008C3E] rounded-lg p-[10px] transition duration-250 ease-out "><img
+                  class="mr-[6px]" src="./assets/call.png" alt="Call"> Call</button>
             </div>
           </div>
         </div>
         <div class="rounded-[12px] bg-white p-8 drop-shadow-[0_2px_3px_rgba(0,0,0,0.15)]">
           <div class="flex justify-between items-center mb-4">
-            <div class="w-[60px] h-[60px] bg-[#FFE3E2] rounded-2xl flex items-center justify-center"> 
-              <img class="w-[32px]" src="./assets/emergency.png" alt="Emergency" >
+            <div class="w-[60px] h-[60px] bg-[#FFE3E2] rounded-2xl flex items-center justify-center">
+              <img class="w-[32px]" src="./assets/fire-service.png" alt="fire-service">
             </div>
-            <img class="cursor-pointer" src="./assets/HeartVector.png" alt="Heart" >
+            <img class="cursor-pointer vectorHeart" src="./assets/HeartVector.png" alt="Heart">
           </div>
           <div class="">
-            <h2 class="font-hind font-bold text-2xl">জাতীয় জরুরি সেবা</h2>
-            <p class="font-roboto text-[18px] text-[#5C5C5C] mb-6">National Emergency</p>
+            <h2 class="font-hind font-bold text-2xl">ফায়ার সার্ভিস</h2>
+            <p class="font-roboto text-[18px] text-[#5C5C5C] mb-6">Fire Service</p>
             <h3 class="font-roboto text-[32px] font-bold mb-1">999</h3>
-            <p class="font-hind rounded-full bg-[#F2F2F2] px-4 py-2 text-[#5C5C5C] mb-[30px] inline-block text-[18px] font-normal">সার্বজনীন</p>
+            <p
+              class="font-hind rounded-full bg-[#F2F2F2] px-4 py-2 text-[#5C5C5C] mb-[30px] inline-block text-[18px] font-normal">
+              ফায়ার</p>
             <div class="flex gap-2 font-roboto">
-              <button class="cursor-pointer w-full justify-center flex items-center border border-[#D4D6D5] rounded-lg p-[10px] hover:bg-black hover:text-white transition duration-250 ease-out "><img class="mr-[6px]" src="./assets/copy.png" alt="Copy" > Copy</button>
-              <button class="cursor-pointer w-full justify-center text-white flex items-center bg-[#00A63E] hover:bg-[#008C3E] rounded-lg p-[10px] transition duration-250 ease-out "><img class="mr-[6px]" src="./assets/call.png" alt="Call" > Call</button>
+              <button
+                class="copy-btn cursor-pointer w-full justify-center flex items-center border border-[#D4D6D5] rounded-lg p-[10px] hover:bg-black hover:text-white transition duration-250 ease-out "><img
+                  class="mr-[6px]" src="./assets/copy.png" alt="Copy"> Copy</button>
+              <button
+                class="call-btn cursor-pointer w-full justify-center text-white flex items-center bg-[#00A63E] hover:bg-[#008C3E] rounded-lg p-[10px] transition duration-250 ease-out "><img
+                  class="mr-[6px]" src="./assets/call.png" alt="Call"> Call</button>
             </div>
           </div>
         </div>
         <div class="rounded-[12px] bg-white p-8 drop-shadow-[0_2px_3px_rgba(0,0,0,0.15)]">
           <div class="flex justify-between items-center mb-4">
-            <div class="w-[60px] h-[60px] bg-[#FFE3E2] rounded-2xl flex items-center justify-center"> 
-              <img class="w-[32px]" src="./assets/emergency.png" alt="Emergency" >
+            <div class="w-[60px] h-[60px] bg-[#FFE3E2] rounded-2xl flex items-center justify-center">
+              <img class="w-[32px]" src="./assets/ambulance.png" alt="Ambulance">
             </div>
-            <img class="cursor-pointer" src="./assets/HeartVector.png" alt="Heart" >
+            <img class="cursor-pointer vectorHeart" src="./assets/HeartVector.png" alt="Heart">
           </div>
           <div class="">
-            <h2 class="font-hind font-bold text-2xl">জাতীয় জরুরি সেবা</h2>
-            <p class="font-roboto text-[18px] text-[#5C5C5C] mb-6">National Emergency</p>
-            <h3 class="font-roboto text-[32px] font-bold mb-1">999</h3>
-            <p class="font-hind rounded-full bg-[#F2F2F2] px-4 py-2 text-[#5C5C5C] mb-[30px] inline-block text-[18px] font-normal">সার্বজনীন</p>
+            <h2 class="font-hind font-bold text-2xl">অ্যাম্বুলেন্স</h2>
+            <p class="font-roboto text-[18px] text-[#5C5C5C] mb-6">Ambulance</p>
+            <h3 class="font-roboto text-[32px] font-bold mb-1">1994-999999</h3>
+            <p
+              class="font-hind rounded-full bg-[#F2F2F2] px-4 py-2 text-[#5C5C5C] mb-[30px] inline-block text-[18px] font-normal">
+              স্বাস্থ্য</p>
             <div class="flex gap-2 font-roboto">
-              <button class="cursor-pointer w-full justify-center flex items-center border border-[#D4D6D5] rounded-lg p-[10px] hover:bg-black hover:text-white transition duration-250 ease-out "><img class="mr-[6px]" src="./assets/copy.png" alt="Copy" > Copy</button>
-              <button class="cursor-pointer w-full justify-center text-white flex items-center bg-[#00A63E] hover:bg-[#008C3E] rounded-lg p-[10px] transition duration-250 ease-out "><img class="mr-[6px]" src="./assets/call.png" alt="Call" > Call</button>
+              <button
+                class="copy-btn cursor-pointer w-full justify-center flex items-center border border-[#D4D6D5] rounded-lg p-[10px] hover:bg-black hover:text-white transition duration-250 ease-out "><img
+                  class="mr-[6px]" src="./assets/copy.png" alt="Copy"> Copy</button>
+              <button
+                class="call-btn cursor-pointer w-full justify-center text-white flex items-center bg-[#00A63E] hover:bg-[#008C3E] rounded-lg p-[10px] transition duration-250 ease-out "><img
+                  class="mr-[6px]" src="./assets/call.png" alt="Call"> Call</button>
             </div>
           </div>
         </div>
         <div class="rounded-[12px] bg-white p-8 drop-shadow-[0_2px_3px_rgba(0,0,0,0.15)]">
           <div class="flex justify-between items-center mb-4">
-            <div class="w-[60px] h-[60px] bg-[#FFE3E2] rounded-2xl flex items-center justify-center"> 
-              <img class="w-[32px]" src="./assets/emergency.png" alt="Emergency" >
+            <div class="w-[60px] h-[60px] bg-[#FFE3E2] rounded-2xl flex items-center justify-center">
+              <img class="w-[32px]" src="./assets/emergency.png" alt="Emergency">
             </div>
-            <img class="cursor-pointer" src="./assets/HeartVector.png" alt="Heart" >
+            <img class="cursor-pointer vectorHeart" src="./assets/HeartVector.png" alt="Heart">
           </div>
           <div class="">
-            <h2 class="font-hind font-bold text-2xl">জাতীয় জরুরি সেবা</h2>
-            <p class="font-roboto text-[18px] text-[#5C5C5C] mb-6">National Emergency</p>
-            <h3 class="font-roboto text-[32px] font-bold mb-1">999</h3>
-            <p class="font-hind rounded-full bg-[#F2F2F2] px-4 py-2 text-[#5C5C5C] mb-[30px] inline-block text-[18px] font-normal">সার্বজনীন</p>
+            <h2 class="font-hind font-bold text-2xl">নারী ও শিশু সহায়তা</h2>
+            <p class="font-roboto text-[18px] text-[#5C5C5C] mb-6">Women & Child Helpline</p>
+            <h3 class="font-roboto text-[32px] font-bold mb-1">109</h3>
+            <p
+              class="font-hind rounded-full bg-[#F2F2F2] px-4 py-2 text-[#5C5C5C] mb-[30px] inline-block text-[18px] font-normal">
+              সহায়তা</p>
             <div class="flex gap-2 font-roboto">
-              <button class="cursor-pointer w-full justify-center flex items-center border border-[#D4D6D5] rounded-lg p-[10px] hover:bg-black hover:text-white transition duration-250 ease-out "><img class="mr-[6px]" src="./assets/copy.png" alt="Copy" > Copy</button>
-              <button class="cursor-pointer w-full justify-center text-white flex items-center bg-[#00A63E] hover:bg-[#008C3E] rounded-lg p-[10px] transition duration-250 ease-out "><img class="mr-[6px]" src="./assets/call.png" alt="Call" > Call</button>
+              <button
+                class="copy-btn cursor-pointer w-full justify-center flex items-center border border-[#D4D6D5] rounded-lg p-[10px] hover:bg-black hover:text-white transition duration-250 ease-out "><img
+                  class="mr-[6px]" src="./assets/copy.png" alt="Copy"> Copy</button>
+              <button
+                class="call-btn cursor-pointer w-full justify-center text-white flex items-center bg-[#00A63E] hover:bg-[#008C3E] rounded-lg p-[10px] transition duration-250 ease-out "><img
+                  class="mr-[6px]" src="./assets/call.png" alt="Call"> Call</button>
             </div>
           </div>
         </div>
         <div class="rounded-[12px] bg-white p-8 drop-shadow-[0_2px_3px_rgba(0,0,0,0.15)]">
           <div class="flex justify-between items-center mb-4">
-            <div class="w-[60px] h-[60px] bg-[#FFE3E2] rounded-2xl flex items-center justify-center"> 
-              <img class="w-[32px]" src="./assets/emergency.png" alt="Emergency" >
+            <div class="w-[60px] h-[60px] bg-[#FFE3E2] rounded-2xl flex items-center justify-center">
+              <img class="w-[32px]" src="./assets/emergency.png" alt="Emergency">
             </div>
-            <img class="cursor-pointer" src="./assets/HeartVector.png" alt="Heart" >
+            <img class="cursor-pointer vectorHeart" src="./assets/HeartVector.png" alt="Heart">
           </div>
           <div class="">
-            <h2 class="font-hind font-bold text-2xl">জাতীয় জরুরি সেবা</h2>
-            <p class="font-roboto text-[18px] text-[#5C5C5C] mb-6">National Emergency</p>
-            <h3 class="font-roboto text-[32px] font-bold mb-1">999</h3>
-            <p class="font-hind rounded-full bg-[#F2F2F2] px-4 py-2 text-[#5C5C5C] mb-[30px] inline-block text-[18px] font-normal">সার্বজনীন</p>
+            <h2 class="font-hind font-bold text-2xl">দুদক</h2>
+            <p class="font-roboto text-[18px] text-[#5C5C5C] mb-6">Anti-Corruption</p>
+            <h3 class="font-roboto text-[32px] font-bold mb-1">106</h3>
+            <p
+              class="font-hind rounded-full bg-[#F2F2F2] px-4 py-2 text-[#5C5C5C] mb-[30px] inline-block text-[18px] font-normal">
+              সরকারি</p>
             <div class="flex gap-2 font-roboto">
-              <button class="cursor-pointer w-full justify-center flex items-center border border-[#D4D6D5] rounded-lg p-[10px] hover:bg-black hover:text-white transition duration-250 ease-out "><img class="mr-[6px]" src="./assets/copy.png" alt="Copy" > Copy</button>
-              <button class="cursor-pointer w-full justify-center text-white flex items-center bg-[#00A63E] hover:bg-[#008C3E] rounded-lg p-[10px] transition duration-250 ease-out "><img class="mr-[6px]" src="./assets/call.png" alt="Call" > Call</button>
+              <button
+                class="copy-btn cursor-pointer w-full justify-center flex items-center border border-[#D4D6D5] rounded-lg p-[10px] hover:bg-black hover:text-white transition duration-250 ease-out "><img
+                  class="mr-[6px]" src="./assets/copy.png" alt="Copy"> Copy</button>
+              <button
+                class="call-btn cursor-pointer w-full justify-center text-white flex items-center bg-[#00A63E] hover:bg-[#008C3E] rounded-lg p-[10px] transition duration-250 ease-out "><img
+                  class="mr-[6px]" src="./assets/call.png" alt="Call"> Call</button>
             </div>
           </div>
         </div>
         <div class="rounded-[12px] bg-white p-8 drop-shadow-[0_2px_3px_rgba(0,0,0,0.15)]">
           <div class="flex justify-between items-center mb-4">
-            <div class="w-[60px] h-[60px] bg-[#FFE3E2] rounded-2xl flex items-center justify-center"> 
-              <img class="w-[32px]" src="./assets/emergency.png" alt="Emergency" >
+            <div class="w-[60px] h-[60px] bg-[#FFE3E2] rounded-2xl flex items-center justify-center">
+              <img class="w-[32px]" src="./assets/emergency.png" alt="Emergency">
             </div>
-            <img class="cursor-pointer" src="./assets/HeartVector.png" alt="Heart" >
+            <img class="cursor-pointer vectorHeart" src="./assets/HeartVector.png" alt="Heart">
           </div>
           <div class="">
             <h2 class="font-hind font-bold text-2xl">জাতীয় জরুরি সেবা</h2>
             <p class="font-roboto text-[18px] text-[#5C5C5C] mb-6">National Emergency</p>
             <h3 class="font-roboto text-[32px] font-bold mb-1">999</h3>
-            <p class="font-hind rounded-full bg-[#F2F2F2] px-4 py-2 text-[#5C5C5C] mb-[30px] inline-block text-[18px] font-normal">সার্বজনীন</p>
+            <p
+              class="font-hind rounded-full bg-[#F2F2F2] px-4 py-2 text-[#5C5C5C] mb-[30px] inline-block text-[18px] font-normal">
+              সার্বজনীন</p>
             <div class="flex gap-2 font-roboto">
-              <button class="cursor-pointer w-full justify-center flex items-center border border-[#D4D6D5] rounded-lg p-[10px] hover:bg-black hover:text-white transition duration-250 ease-out "><img class="mr-[6px]" src="./assets/copy.png" alt="Copy" > Copy</button>
-              <button class="cursor-pointer w-full justify-center text-white flex items-center bg-[#00A63E] hover:bg-[#008C3E] rounded-lg p-[10px] transition duration-250 ease-out "><img class="mr-[6px]" src="./assets/call.png" alt="Call" > Call</button>
+              <button
+                class="copy-btn cursor-pointer w-full justify-center flex items-center border border-[#D4D6D5] rounded-lg p-[10px] hover:bg-black hover:text-white transition duration-250 ease-out "><img
+                  class="mr-[6px]" src="./assets/copy.png" alt="Copy"> Copy</button>
+              <button
+                class="call-btn cursor-pointer w-full justify-center text-white flex items-center bg-[#00A63E] hover:bg-[#008C3E] rounded-lg p-[10px] transition duration-250 ease-out "><img
+                  class="mr-[6px]" src="./assets/call.png" alt="Call"> Call</button>
             </div>
           </div>
         </div>
         <div class="rounded-[12px] bg-white p-8 drop-shadow-[0_2px_3px_rgba(0,0,0,0.15)]">
           <div class="flex justify-between items-center mb-4">
-            <div class="w-[60px] h-[60px] bg-[#FFE3E2] rounded-2xl flex items-center justify-center"> 
-              <img class="w-[32px]" src="./assets/emergency.png" alt="Emergency" >
+            <div class="w-[60px] h-[60px] bg-[#FFE3E2] rounded-2xl flex items-center justify-center">
+              <img class="w-[32px]" src="./assets/emergency.png" alt="Emergency">
             </div>
-            <img class="cursor-pointer" src="./assets/HeartVector.png" alt="Heart" >
+            <img class="cursor-pointer vectorHeart" src="./assets/HeartVector.png" alt="Heart">
           </div>
           <div class="">
             <h2 class="font-hind font-bold text-2xl">জাতীয় জরুরি সেবা</h2>
             <p class="font-roboto text-[18px] text-[#5C5C5C] mb-6">National Emergency</p>
             <h3 class="font-roboto text-[32px] font-bold mb-1">999</h3>
-            <p class="font-hind rounded-full bg-[#F2F2F2] px-4 py-2 text-[#5C5C5C] mb-[30px] inline-block text-[18px] font-normal">সার্বজনীন</p>
+            <p
+              class="font-hind rounded-full bg-[#F2F2F2] px-4 py-2 text-[#5C5C5C] mb-[30px] inline-block text-[18px] font-normal">
+              সার্বজনীন</p>
             <div class="flex gap-2 font-roboto">
-              <button class="cursor-pointer w-full justify-center flex items-center border border-[#D4D6D5] rounded-lg p-[10px] hover:bg-black hover:text-white transition duration-250 ease-out "><img class="mr-[6px]" src="./assets/copy.png" alt="Copy" > Copy</button>
-              <button class="cursor-pointer w-full justify-center text-white flex items-center bg-[#00A63E] hover:bg-[#008C3E] rounded-lg p-[10px] transition duration-250 ease-out "><img class="mr-[6px]" src="./assets/call.png" alt="Call" > Call</button>
+              <button
+                class="copy-btn cursor-pointer w-full justify-center flex items-center border border-[#D4D6D5] rounded-lg p-[10px] hover:bg-black hover:text-white transition duration-250 ease-out "><img
+                  class="mr-[6px]" src="./assets/copy.png" alt="Copy"> Copy</button>
+              <button
+                class="call-btn cursor-pointer w-full justify-center text-white flex items-center bg-[#00A63E] hover:bg-[#008C3E] rounded-lg p-[10px] transition duration-250 ease-out "><img
+                  class="mr-[6px]" src="./assets/call.png" alt="Call"> Call</button>
             </div>
           </div>
         </div>
         <div class="rounded-[12px] bg-white p-8 drop-shadow-[0_2px_3px_rgba(0,0,0,0.15)]">
           <div class="flex justify-between items-center mb-4">
-            <div class="w-[60px] h-[60px] bg-[#FFE3E2] rounded-2xl flex items-center justify-center"> 
-              <img class="w-[32px]" src="./assets/emergency.png" alt="Emergency" >
+            <div class="w-[60px] h-[60px] bg-[#FFE3E2] rounded-2xl flex items-center justify-center">
+              <img class="w-[32px]" src="./assets/emergency.png" alt="Emergency">
             </div>
-            <img class="cursor-pointer" src="./assets/HeartVector.png" alt="Heart" >
+            <img class="cursor-pointer vectorHeart" src="./assets/HeartVector.png" alt="Heart">
           </div>
           <div class="">
             <h2 class="font-hind font-bold text-2xl">জাতীয় জরুরি সেবা</h2>
             <p class="font-roboto text-[18px] text-[#5C5C5C] mb-6">National Emergency</p>
             <h3 class="font-roboto text-[32px] font-bold mb-1">999</h3>
-            <p class="font-hind rounded-full bg-[#F2F2F2] px-4 py-2 text-[#5C5C5C] mb-[30px] inline-block text-[18px] font-normal">সার্বজনীন</p>
+            <p
+              class="font-hind rounded-full bg-[#F2F2F2] px-4 py-2 text-[#5C5C5C] mb-[30px] inline-block text-[18px] font-normal">
+              সার্বজনীন</p>
             <div class="flex gap-2 font-roboto">
-              <button class="cursor-pointer w-full justify-center flex items-center border border-[#D4D6D5] rounded-lg p-[10px] hover:bg-black hover:text-white transition duration-250 ease-out "><img class="mr-[6px]" src="./assets/copy.png" alt="Copy" > Copy</button>
-              <button class="cursor-pointer w-full justify-center text-white flex items-center bg-[#00A63E] hover:bg-[#008C3E] rounded-lg p-[10px] transition duration-250 ease-out "><img class="mr-[6px]" src="./assets/call.png" alt="Call" > Call</button>
+              <button
+                class="copy-btn cursor-pointer w-full justify-center flex items-center border border-[#D4D6D5] rounded-lg p-[10px] hover:bg-black hover:text-white transition duration-250 ease-out "><img
+                  class="mr-[6px]" src="./assets/copy.png" alt="Copy"> Copy</button>
+              <button
+                class="call-btn cursor-pointer w-full justify-center text-white flex items-center bg-[#00A63E] hover:bg-[#008C3E] rounded-lg p-[10px] transition duration-250 ease-out "><img
+                  class="mr-[6px]" src="./assets/call.png" alt="Call"> Call</button>
             </div>
           </div>
         </div>
@@ -237,30 +295,21 @@
       <div class="lg:col-span-3 mt-8 lg:mt-0 rounded-[12px] bg-white p-6 drop-shadow-[0_2px_3px_rgba(0,0,0,0.15)]">
         <div class="flex justify-between items-center mb-4">
           <div class="flex gap-2 font-roboto text-xl font-medium items-center">
-            <img src="./assets/clock.png" alt="clock" class="w-[24px] h-[24px]" >
+            <img src="./assets/clock.png" alt="clock" class="w-[24px] h-[24px]">
             <p>Call History</p>
           </div>
-          <button class="bg-[#00A63E] py-3.5 px-9 rounded-[50px] text-white font-inter font-semibold cursor-pointer hover:bg-[#008C3E] transition duration-250 ease-out">
+          <button id="clear-btn"
+            class="bg-[#00A63E] py-3.5 px-9 rounded-[50px] text-white font-inter font-semibold cursor-pointer hover:bg-[#008C3E] transition duration-250 ease-out">
             Clear
           </button>
         </div>
-        <div class="p-4 bg-[#FAFAFA] rounded-[8px] flex justify-between items-center mb-2">
-          <div class="">
-            <h2 class="font-hind font-semibold text-[18px]">জাতীয় জরুরি সেবা</h2>
-            <p class="font-roboto text-[18px] text-[#5C5C5C] mb-6">999</p>
-          </div>
-          <p class="font-roboto text-[16px] text-black mb-6">11:36:58 AM</p>
-        </div>
-        <div class="p-4 bg-[#FAFAFA] rounded-[8px] flex justify-between items-center mb-2">
-          <div class="">
-            <h2 class="font-hind font-semibold text-[18px]">জাতীয় জরুরি সেবা</h2>
-            <p class="font-roboto text-[18px] text-[#5C5C5C] mb-6">999</p>
-          </div>
-          <p class="font-roboto text-[16px] text-black mb-6">11:36:58 AM</p>
+        <div class="dynamic">
         </div>
       </div>
     </section>
-   </main>
+  </main>
   <!-- Main Section End -->
+  <script src="./index.js"></script>
 </body>
+
 </html>
